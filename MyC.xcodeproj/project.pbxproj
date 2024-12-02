@@ -6,8 +6,40 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0226E6202CFD852F00CD2C69 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0226E61F2CFD852F00CD2C69 /* OpenGL.framework */; };
+		0226E67F2CFD916300CD2C69 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0226E67E2CFD916300CD2C69 /* libGLEW.2.2.0.dylib */; };
+		0226E6812CFD917700CD2C69 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0226E6802CFD917700CD2C69 /* libglfw.3.4.dylib */; };
+		0226E6822CFD961000CD2C69 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0226E67E2CFD916300CD2C69 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0226E6842CFD961300CD2C69 /* libglfw.3.4.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0226E6802CFD917700CD2C69 /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0226E69E2CFDA56F00CD2C69 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0226E61F2CFD852F00CD2C69 /* OpenGL.framework */; };
+		0226E69F2CFDA57E00CD2C69 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0226E67E2CFD916300CD2C69 /* libGLEW.2.2.0.dylib */; };
+		0226E6A02CFDA59200CD2C69 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0226E6802CFD917700CD2C69 /* libglfw.3.4.dylib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		0226E6122CFD433800CD2C69 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		0226E6832CFD961000CD2C69 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0226E6822CFD961000CD2C69 /* libGLEW.2.2.0.dylib in Embed Libraries */,
+				0226E6842CFD961300CD2C69 /* libglfw.3.4.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0226E6872CFD9FE600CD2C69 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -20,12 +52,21 @@
 
 /* Begin PBXFileReference section */
 		0226E6142CFD433800CD2C69 /* MyC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyC; sourceTree = BUILT_PRODUCTS_DIR; };
+		0226E61F2CFD852F00CD2C69 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		0226E67E2CFD916300CD2C69 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../../usr/local/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		0226E6802CFD917700CD2C69 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
+		0226E6892CFD9FE600CD2C69 /* MyC++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "MyC++"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0226E6162CFD433800CD2C69 /* MyC */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MyC;
+			sourceTree = "<group>";
+		};
+		0226E68A2CFD9FE700CD2C69 /* MyC++ */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "MyC++";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +76,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0226E6812CFD917700CD2C69 /* libglfw.3.4.dylib in Frameworks */,
+				0226E67F2CFD916300CD2C69 /* libGLEW.2.2.0.dylib in Frameworks */,
+				0226E6202CFD852F00CD2C69 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0226E6862CFD9FE600CD2C69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0226E6A02CFDA59200CD2C69 /* libglfw.3.4.dylib in Frameworks */,
+				0226E69F2CFDA57E00CD2C69 /* libGLEW.2.2.0.dylib in Frameworks */,
+				0226E69E2CFDA56F00CD2C69 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				0226E6162CFD433800CD2C69 /* MyC */,
+				0226E68A2CFD9FE700CD2C69 /* MyC++ */,
+				0226E61E2CFD852F00CD2C69 /* Frameworks */,
 				0226E6152CFD433800CD2C69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,8 +109,19 @@
 			isa = PBXGroup;
 			children = (
 				0226E6142CFD433800CD2C69 /* MyC */,
+				0226E6892CFD9FE600CD2C69 /* MyC++ */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0226E61E2CFD852F00CD2C69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0226E6802CFD917700CD2C69 /* libglfw.3.4.dylib */,
+				0226E67E2CFD916300CD2C69 /* libGLEW.2.2.0.dylib */,
+				0226E61F2CFD852F00CD2C69 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -67,6 +134,7 @@
 				0226E6102CFD433800CD2C69 /* Sources */,
 				0226E6112CFD433800CD2C69 /* Frameworks */,
 				0226E6122CFD433800CD2C69 /* CopyFiles */,
+				0226E6832CFD961000CD2C69 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -82,6 +150,28 @@
 			productReference = 0226E6142CFD433800CD2C69 /* MyC */;
 			productType = "com.apple.product-type.tool";
 		};
+		0226E6882CFD9FE600CD2C69 /* MyC++ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0226E68D2CFD9FE700CD2C69 /* Build configuration list for PBXNativeTarget "MyC++" */;
+			buildPhases = (
+				0226E6852CFD9FE600CD2C69 /* Sources */,
+				0226E6862CFD9FE600CD2C69 /* Frameworks */,
+				0226E6872CFD9FE600CD2C69 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0226E68A2CFD9FE700CD2C69 /* MyC++ */,
+			);
+			name = "MyC++";
+			packageProductDependencies = (
+			);
+			productName = "MyC++";
+			productReference = 0226E6892CFD9FE600CD2C69 /* MyC++ */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +182,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					0226E6132CFD433800CD2C69 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					0226E6882CFD9FE600CD2C69 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -111,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				0226E6132CFD433800CD2C69 /* MyC */,
+				0226E6882CFD9FE600CD2C69 /* MyC++ */,
 			);
 		};
 /* End PBXProject section */
@@ -123,18 +217,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0226E6852CFD9FE600CD2C69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		0226E6192CFD433800CD2C69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -164,6 +265,11 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -178,6 +284,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/freeglut/3.6.0/lib/**",
+					"/usr/local/Cellar/glew/2.2.0_1/lib/**",
+					"/usr/local/Cellar/glfw/3.4/lib/**",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -190,12 +306,12 @@
 		0226E61A2CFD433800CD2C69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -225,6 +341,11 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -233,6 +354,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/freeglut/3.6.0/lib/**",
+					"/usr/local/Cellar/glew/2.2.0_1/lib/**",
+					"/usr/local/Cellar/glfw/3.4/lib/**",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -244,19 +375,103 @@
 		0226E61C2CFD433800CD2C69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67P7D9C2R3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/freeglut/3.6.0/lib/**",
+					"/usr/local/Cellar/glfw/3.4/lib/**",
+					"/usr/local/Cellar/glew/2.2.0_1/lib/**",
+					/usr/local/Cellar/glew/2.2.0_1/lib,
+					/usr/local/Cellar/glfw/3.4/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+				);
+				USE_HEADERMAP = YES;
 			};
 			name = Debug;
 		};
 		0226E61D2CFD433800CD2C69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67P7D9C2R3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/freeglut/3.6.0/lib/**",
+					"/usr/local/Cellar/glfw/3.4/lib/**",
+					"/usr/local/Cellar/glew/2.2.0_1/lib/**",
+					/usr/local/Cellar/glew/2.2.0_1/lib,
+					/usr/local/Cellar/glfw/3.4/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+				);
+				USE_HEADERMAP = YES;
+			};
+			name = Release;
+		};
+		0226E68E2CFD9FE700CD2C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67P7D9C2R3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+					/usr/local/Cellar/glad/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.2.0_1/lib,
+					/usr/local/Cellar/glfw/3.4/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0226E68F2CFD9FE700CD2C69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 67P7D9C2R3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/freeglut/3.6.0/include,
+					/usr/local/Cellar/glew/2.2.0_1/include,
+					/usr/local/Cellar/glfw/3.4/include,
+					/usr/local/Cellar/glad/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.2.0_1/lib,
+					/usr/local/Cellar/glfw/3.4/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -278,6 +493,15 @@
 			buildConfigurations = (
 				0226E61C2CFD433800CD2C69 /* Debug */,
 				0226E61D2CFD433800CD2C69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0226E68D2CFD9FE700CD2C69 /* Build configuration list for PBXNativeTarget "MyC++" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0226E68E2CFD9FE700CD2C69 /* Debug */,
+				0226E68F2CFD9FE700CD2C69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
